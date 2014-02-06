@@ -33,7 +33,7 @@ booktorious.spineEntry = {
 
     contentResizeIframe: function () {
         sarge(this.iframe)
-            .attr("height", this.iframe.contentDocument.height)
+            .attr("height", typeof(this.iframe.contentDocument.height)!=='undefined'?this.iframe.contentDocument.height:800 )
             .attr("height", this.iframe.contentDocument.documentElement.scrollHeight);
     }
 };
